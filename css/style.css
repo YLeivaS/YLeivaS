@@ -1,0 +1,169 @@
+/* Modo claro */
+:root {
+    --background-color: #f4f4f9;
+    --text-color: #333;
+    --button-bg: #E4002B; /* Rojo INACAP */
+    --button-hover-bg: #b8001e;
+    --input-bg: white;
+    --input-border: #ccc;
+    --button-border: #E4002B;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #f4f4f4;
+    --input-bg: #333;
+    --input-border: #555;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background-color: var(--input-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color);
+}
+
+p {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Ajustes para centrar los campos de entrada */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espacio uniforme entre los campos */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #4CAF50;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--button-bg);
+    color: white;
+    border: 2px solid var(--button-border);
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+    border-color: var(--button-hover-bg);
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--button-bg);
+}
+
+/* Botón de alternancia de modo */
+#modeToggle {
+    position: fixed; /* Fija el botón en la pantalla */
+    top: 20px; /* Espacio desde la parte superior */
+    right: 20px; /* Espacio desde el borde derecho */
+    background-color: var(--button-bg);
+    color: white;
+    border: 2px solid var(--button-border);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    z-index: 1000; /* Asegura que quede sobre otros elementos */
+    display: inline-block; /* Hace que solo ocupe el espacio necesario */
+    width: auto; /* Ajusta el ancho al contenido */
+}
+
+#modeToggle:hover {
+    background-color: var(--button-hover-bg);
+    border-color: var(--button-hover-bg);
+}
+
+/* Recuadro de ejemplos */
+.examples {
+    width: 100%; /* Igual al ancho de la calculadora */
+    max-width: 600px;
+    margin: 20px auto 0; /* Centrado con margen superior */
+    background-color: var(--input-bg);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--button-border);
+    text-align: left;
+}
+
+.examples h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.examples p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.examples .example {
+    background-color: #e8e8e8;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: monospace;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.examples .example-title {
+    font-weight: bold;
+    color: var(--button-bg);
+    margin-bottom: 5px;
+}
+
+.examples .example-description {
+    color: var(--text-color);
+    font-size: 14px;
+}
